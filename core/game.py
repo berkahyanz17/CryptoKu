@@ -2,6 +2,7 @@ from services.crypto_market import CryptoMarket
 from services.forex_market import ForexMarket
 from services.storage import Storage
 from core.router import CommandRouter
+from services.shop_market import ShopMarket
 
 class Game:
     def __init__(self, player_name):
@@ -19,6 +20,7 @@ class Game:
 
         self.crypto_market = CryptoMarket()
         self.forex_market = ForexMarket()
+        self.shop_market = ShopMarket()
 
         self.running = True
 

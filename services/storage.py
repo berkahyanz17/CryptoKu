@@ -13,6 +13,7 @@ class Storage:
             "money": player.money,
             "stamina": player.stamina,
             "crypto_wallet": player.crypto_wallet,
+            "inventory": player.inventory,
         }
 
         with open(self.filename, "w") as f:
@@ -28,7 +29,8 @@ class Storage:
                 money=data["money"],
                 stamina=data["stamina"],
                 crypto_wallet=data.get("crypto_wallet", {}),
-                forex_positions={}
+                forex_positions={},
+                inventory=data.get("inventory", {})
             )
 
         except FileNotFoundError:
